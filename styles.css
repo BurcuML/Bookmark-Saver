@@ -65,7 +65,8 @@ header {
 /* Input Section */
 .bookmark-input-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1.8rem;
   gap: 1rem;
 }
@@ -85,6 +86,37 @@ header {
 }
 
 #bookmark-url:focus {
+  box-shadow:
+    0 0 12px var(--color-secondary),
+    0 0 20px var(--color-primary);
+}
+
+#bookmark-name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 0 8px #007fff;
+  background: var(--color-dark);
+  color: var(--color-light);
+  transition: box-shadow 0.3s ease;
+}
+
+#bookmark-name:hover {
+  box-shadow:
+    0 0 20px var(--color-accent),
+    0 0 30px var(--color-secondary);
+  transform: scale(1.05);
+  animation: bounce 0.5s;
+}
+
+#bookmark-name:active {
+  transform: scale(0.95);
+}
+
+#bookmark-name:focus {
   box-shadow:
     0 0 12px var(--color-secondary),
     0 0 20px var(--color-primary);
