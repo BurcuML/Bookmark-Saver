@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Color Palette */
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #FF6F61;
+  --color-secondary: #6BDBDB;
+  --color-accent: #FFD93D;
+  --color-light: #222222;
+  --color-dark: #F0F0F0;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive, monospace;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: linear-gradient(145deg, #f0f0f0, #e0e7e9);
+  border-radius: 15px;
+  box-shadow:
+    0 0 18px var(--color-primary),
+    0 0 21px var(--color-secondary);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Header */
+header {
+  margin-bottom: 2rem;
+}
+
+.retro-title {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  text-shadow:
+    0 0 5px var(--color-primary),
+    0 0 10px var(--color-secondary),
+    0 0 20px var(--color-primary);
+  animation: neonGlow 2.5s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  margin-top: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Input Section */
+.bookmark-input-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+  gap: 1rem;
+}
+
+#bookmark-url {
+  flex-grow: 1;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 0 8px #007fff;
+  background: var(--color-dark);
+  color: var(--color-light);
+  transition: box-shadow 0.3s ease;
+}
+
+#bookmark-url:focus {
+  box-shadow:
+    0 0 12px var(--color-secondary),
+    0 0 20px var(--color-primary);
+}
+
+/* Button */
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  color: var(--color-light);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  text-transform: uppercase;
+  background: var(--color-primary);
+  box-shadow:
+    0 0 8px var(--color-primary),
+    0 0 16px var(--color-secondary);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  box-shadow:
+    0 0 20px var(--color-accent),
+    0 0 30px var(--color-secondary);
+  transform: scale(1.05);
+  animation: bounce 0.5s;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Bookmark List */
+.bookmark-list-section {
+  text-align: left;
+}
+
+.list-title {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px var(--color-accent);
+}
+
+.bookmark-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 1rem;
+  border-radius: 10px;
+  background: var(--color-dark);
+  box-shadow:
+    inset 0 0 10px var(--color-primary),
+    0 0 12px var(--color-secondary);
+}
+
+.bookmark-list li {
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.6rem;
+  border-left: 6px solid var(--color-primary);
+  color: var(--color-light);
+  font-size: 0.75rem;
+  word-break: break-all;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bookmark-list li:hover {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+  font-weight: bold;
+  border-left-color: var(--color-accent);
+}
+
+/* Animations */
+
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 4px var(--color-primary),
+      0 0 10px var(--color-secondary),
+      0 0 20px var(--color-primary),
+      0 0 40px var(--color-primary);
+  }
+  50% {
+    text-shadow:
+      0 0 6px var(--color-accent),
+      0 0 12px var(--color-secondary),
+      0 0 30px var(--color-accent),
+      0 0 50px var(--color-secondary);
+  }
+}
+
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+/* Scrollbar */
+.bookmark-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bookmark-list::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+  box-shadow: 0 0 6px var(--color-secondary);
+}
+
+.bookmark-list::-webkit-scrollbar-track {
+  background: transparent;
+}
