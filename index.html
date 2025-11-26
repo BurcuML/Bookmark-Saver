@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boookmark Saver</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookmark Saver</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <h1 class="retro-title">🚀 Bookmark Saver</h1>
+            <p class="subtitle">Save and revisit your favorite links with style!</p>
+        </header>
+
+        <section class="bookmark-input-section">
+            <input
+                type="url"
+                id="bookmark-url"
+                placeholder="Enter bookmark URL..."
+                spellcheck="false"
+                autocomplete="off"
+            />
+            <button id="add-bookmark-btn" class="btn retro-button">Add Bookmark</button>
+        </section>
+        
+        <section class="bookmark-list-section">
+            <h2 class="list-title">Your Bookmarks</h2>
+            <ul id="bookmark-list" class="bookmark-list">
+                <!-- Saved bookmarks will appear here -->
+            </ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
