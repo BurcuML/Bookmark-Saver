@@ -151,6 +151,18 @@ header {
   transform: scale(0.95);
 }
 
+.delete-btn {
+  background: var(--color-secondary);
+  box-shadow:
+    0 0 8px var(--color-secondary),
+    0 0 16px var(--color-primary);
+}
+.delete-btn:hover {
+  box-shadow:
+    0 0 20px var(--color-accent),
+    0 0 30px var(--color-primary);
+}
+
 /* Bookmark List */
 .bookmark-list-section {
   text-align: left;
@@ -177,7 +189,7 @@ header {
 
 .bookmark-list li {
   padding: 0.6rem 0.8rem;
-  margin-bottom: 0.6rem;
+  margin: 0.3rem;
   border-left: 6px solid var(--color-primary);
   color: var(--color-light);
   font-size: 0.75rem;
@@ -187,7 +199,6 @@ header {
 }
 
 .bookmark-list li:hover {
-  background: var(--color-secondary);
   color: var(--color-dark);
   font-weight: bold;
   border-left-color: var(--color-accent);
