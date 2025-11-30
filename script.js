@@ -12,10 +12,15 @@ addBookmarkBtn.addEventListener('click',() =>{
         const link = document.createElement('a');
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
+        deleteBtn.classList.toggle('delete-btn');
+        deleteBtn.addEventListener('click', () => {
+            bookmarkList.removeChild(listItem);
+        });
         link.href = url;
         link.textContent = name;
         link.target = '_blank';
         listItem.appendChild(link);
         bookmarkList.appendChild(listItem); 
+        listItem.appendChild(deleteBtn);
     }
 })
