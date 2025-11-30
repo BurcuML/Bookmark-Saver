@@ -152,14 +152,22 @@ header {
 }
 
 .delete-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  color: var(--color-light);
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  align-self:self-end;
+  text-transform: uppercase;
   background: var(--color-secondary);
   box-shadow:
     0 0 8px var(--color-secondary),
-    0 0 16px var(--color-primary);
 }
+
 .delete-btn:hover {
   box-shadow:
-    0 0 20px var(--color-accent),
     0 0 30px var(--color-primary);
 }
 
@@ -188,6 +196,9 @@ header {
 }
 
 .bookmark-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.6rem 0.8rem;
   margin: 0.3rem;
   border-left: 6px solid var(--color-primary);
@@ -204,6 +215,9 @@ header {
   border-left-color: var(--color-accent);
 }
 
+.bookmark-list li a {
+  text-decoration: none;
+}
 /* Animations */
 
 @keyframes neonGlow {
